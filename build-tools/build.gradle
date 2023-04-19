@@ -1,0 +1,36 @@
+import depend.KotlinDependencies
+import depend.ThirdPartyDependencies
+
+apply plugin: 'application'
+apply plugin: 'kotlin'
+
+configurations.compileOnly.canBeResolved = true
+
+jar {
+    manifest {
+        attributes 'Main-Class': 'BuildTools'
+    }
+    from { configurations.compileOnly.collect { it.isDirectory() ? it : zipTree(it) } }
+}
+//
+//tasks.withType(KotlinCompile).all {
+//    kotlinOptions {
+//        jvmTarget = "1.8"
+//    }
+//}
+
+dependencies {
+    implementation KotlinDependencies.kotlinStdLib
+    implementation ThirdPartyDependencies.okhttp3
+    implementation ThirdPartyDependencies.okhttp3LoggingInterceptor
+    implementation "com.eclipsesource.minimal-json:minimal-json:0.9.5"
+    implementation 'org.eclipse.jgit:org.eclipse.jgit:+'
+    implementation 'org.eclipse.jgit:org.eclipse.jgit.ssh.jsch:+'
+    implementation 'com.github.zafarkhaja:java-semver:0.9.0'
+//    implementation ThirdPartyDependencies.logbackClassic
+//    implementation ThirdPartyDependencies.logbackAndroid
+//    implementation ThirdPartyDependencies.slf4j
+    implementation 'org.slf4j:slf4j-nop:1.8.0-beta2'
+    implementation 'net.swiftzer.semver:semver:1.1.1'
+    implementation("com.lordcodes.turtle:turtle:0.5.0")
+}
