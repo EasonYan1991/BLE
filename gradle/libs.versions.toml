@@ -1,7 +1,7 @@
 [versions]
 #Android Gradle plugin
 agp = "8.0.2"
-kotlin-version = "1.8.20"
+kotlin-version = "1.8.10"
 kotlinx-version = "1.7.0"
 kapt = "1.8.20"
 core-ktx = "1.9.0"
@@ -146,6 +146,7 @@ androidx-test-ext-junit = { group = "androidx.test.ext", name = "junit", version
 androidApplication = { id = "com.android.application", version.ref = "agp" }
 androidLibrary = { id = "com.android.library", version.ref = "agp" }
 kotlinAndroid = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin-version" }
+kotlinJvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin-version" }
 #// hilt
 hiltAndroid = { id = "com.google.dagger.hilt.android", version.ref = "hilt-android" }
 #// Kotlin lint

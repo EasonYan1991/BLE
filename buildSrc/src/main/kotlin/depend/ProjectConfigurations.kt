@@ -6,6 +6,8 @@ import org.gradle.api.JavaVersion
 
 
 object ProjectConfigurations {
+    const val PROJECT_NAME = "BLE"
+
     // Android sdk
     // compileSdk
     const val COMPILE_SDK = 33

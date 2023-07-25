@@ -66,14 +66,12 @@ dependencies {
     api(libs.logback.android)
     api(libs.logback.classic)
 
-    testApi(libs.junit)
-    androidTestImplementation(libs.junit)
-    androidTestImplementation(libs.androidx.espresso.core)
 
     api(libs.androidx.core.ktx)
     api(libs.androidx.appcompat)
     api(libs.material)
-    testApi(libs.junit)
-    androidTestApi(libs.androidx.test.ext.junit)
-    androidTestApi(libs.androidx.espresso.core)
+
+    testImplementation(libs.junit)
+    androidTestImplementation(libs.androidx.test.ext.junit)
+    androidTestImplementation(libs.androidx.espresso.core)
 }
