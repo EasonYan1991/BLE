@@ -1,4 +1,0 @@
-ext {
-    mKotlinVersion = "1.8.20"
-    gradleVersion = "7.2.4"
-}
